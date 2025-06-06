@@ -23,7 +23,9 @@ class MongoHandler:
         self.vc_collection = self.db[collection_name]
 
     async def close(self):
-        """Cierra la conexión con la base de datos."""
+        """
+        Cierra la conexión con la base de datos.
+        """
         if self.client:
             self.client.close()
             print("Conexión a MongoDB cerrada.")
