@@ -1,10 +1,9 @@
-# DISCORD
+import os
+
 import discord
 from discord.ext import commands
-
-# OS IMPORTS
-import os
 from dotenv import load_dotenv
+
 
 class VcFunctions(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
