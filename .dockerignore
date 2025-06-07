@@ -1,0 +1,39 @@
+Le saque algunas cosas porque noi uso node
+
+# Git
+.git
+.gitignore
+
+# Python virtual environment
+.venv
+venv
+env
+*.pyc
+__pycache__/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Environment variables
+.env
+*.env
+!/.env.example
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Test files (if you don't run tests inside the container)
+# tests/
+# *.test.py
+# pytest.ini
+# .pytest_cache/
+
+# Logs
+*.log
+logs/
+
+# Other
+*.DS_Store
+Thumbs.db

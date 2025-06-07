@@ -1,13 +1,25 @@
-# Como correr el bot
+## Entorno de Desarrollo
 
-- Crear un archivo .env en la carpeta principal y pegar lo siguiente:
+Este proyecto usa Docker y Docker Compose para gestionar los servicios. Tenes dos formas principales de trabajar:
 
-    TOKEN="TOKEN DEL BOT"
-    
-    BOT_ID="ID DEL BOT"
-    
-    CATEGORY_ID="ID DE LA CATEGORIA PARA LA FUNCION DE CREAR/BORRAR CANALES DE VOZ"
-- Completar las cosas requeridas en el archivo .env
-- Instalar python (desde la version 3.8 a la 3.12), yo use 3.12.8 asi que no aseguro que funcionen los otros pero deberian.
-- Entrar a la terminal dentro de la carpeta del bot y ejecutar pip install -r requirements.txt
-- Ejecutar el archivo main.py
+### 1. Despliegue Completo con Docker
+
+1.  Copia `.env.example` a `.env`.
+2.  Edita `.env` y rellena todas las variables. Asegurate de que `DB_URL` apunte a `mongo-db`.
+3.  Ejecuta `docker compose up -d`.
+
+### 2. Desarrollo (Para trabajar desde el IDE)
+
+Este método te permite ejecutar y depurar el código del bot directamente desde tu IDE (ej. VS Code) mientras la base de datos corre en un contenedor Docker.
+
+1.  **Levanta la base de datos:**
+    ```bash
+    docker compose up -d mongo-db
+    ```
+
+2.  **Configura tu entorno local:**
+    *   Copia `.env.example` a un nuevo archivo llamado `local.env`.
+    *   Edita `local.env` y rellena los secretos.
+    *   **Importante:** Asegurate de que la variable `DB_URL` en `local.env` apunte a `localhost`, no a `mongo-db`.
+
+3.  Listo, ahora podes ejecutar y trabajar en tu archivo `main.py` desde tu IDE.
