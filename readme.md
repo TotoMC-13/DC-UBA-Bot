@@ -18,7 +18,7 @@ Este método te permite ejecutar y depurar el código del bot directamente desde
     ```
 
 2.  **Configura tu entorno local:**
-    *   Copia `.env.example` a un nuevo archivo llamado `local.env`.
+    *   Copia `.env.example` a un nuevo archivo llamado `.env`.
     *   Edita `local.env` y rellena los secretos.
     *   **Importante:** Asegurate de que la variable `DB_URL` en `local.env` apunte a `localhost`, no a `mongo-db`.
 
